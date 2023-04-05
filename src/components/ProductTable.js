@@ -6,7 +6,7 @@ function ProductTable(props) {
   console.log(props.search)
   const filteredData = props.search ? jsonData.filter((product) =>   product.name.toLowerCase().includes(props.search.toLowerCase())): jsonData; 
    return (
-    <div>
+    <div className="ProductTable">
       <table>
         <thead>
           <tr>
