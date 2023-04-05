@@ -21,6 +21,7 @@ function ProductsPage () {
     <h1>IronStore</h1>
         <SearchBar trigger={handleChange} checkbox = {handleChangeCheckBox} /> 
         <ProductTable  search = {search} stock = {stock}/>
+        <h2>Keep raving bro</h2>
     </div> 
   )
 }

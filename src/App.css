@@ -45,13 +45,21 @@ body {
 .ProductTable td {
   border: 1px solid #ccc;
   padding: 10px;
-  animation: color-cycling 5s ease-in-out infinite;
+  animation: color-cycling 1s ease-in-out infinite;
 }
+
 
 h1 {
   font-size: 3rem;
-  animation: color-cycling 2s ease-in-out infinite;
+  animation: color-cycling 0.5s ease-in-out infinite;
   padding-left: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-left: 1rem;
+  text-align: right;
+  padding-right: 3rem;
 }
 
 @keyframes color-cycling {
