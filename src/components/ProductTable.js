@@ -3,8 +3,9 @@ import ProductRow from "./ProductRow";
 import jsonData from "./../data.json";
 
 function ProductTable(props) {
-
-  return (
+  console.log(props.search)
+  const filteredData = props.search ? jsonData.filter((product) =>   product.name.toLowerCase().includes(props.search.toLowerCase())): jsonData; 
+   return (
     <div>
       <table>
         <thead>
@@ -14,11 +15,18 @@ function ProductTable(props) {
           </tr>
         </thead>
         <tbody>
-            {jsonData.forEach((product) => {
-                <ProductRow product={product} />
-                console.log(product);
+          {
+          filteredData.map((data) => {
+            if(props.stock == true)
+            { 
+             if(props.stock === data.inStock)  return <ProductRow key={data.id} product={data} />;
             }
-            )}
+            else {
+              return <ProductRow key={data.id} product={data} />;
+
+            }
+          
+          })}
         </tbody>
       </table>
     </div>

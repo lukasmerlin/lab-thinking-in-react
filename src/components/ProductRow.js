@@ -1,13 +1,12 @@
 import React from "react";
 
-function ProductRow({products}) {
-    // const product = props.product;
-    // const name = product.inStock ? product.name : <span style={{color: 'red'}}>{product.name}</span>;
-    console.log(products);
+function ProductRow(props) {
+    const product = props.product;
+    const name = product.inStock ? product.name : <span style={{color: 'red'}}>{product.name}</span>;
     return (
         <tr>
-            <td>{products.name}</td>
-            <td>{products.price}</td>
+            <td>{name}</td>
+            <td>{product.price}</td>
         </tr>
     );
 }
